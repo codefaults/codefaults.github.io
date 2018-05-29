@@ -1,6 +1,6 @@
 # CODEFAULTS.GITHUB.IO - A magical blog
 
-Just a blog powered by git-page service.
+Just a blog hosted by git-page service.
 
 **You may had some doubts, see below.**
 
