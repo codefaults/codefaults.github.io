@@ -10,7 +10,7 @@ Just a blog hosted by git-page service.
 
 Okay, Your this question is very good, but I want tell you **nothing at here**.
 
-## What purpose for you created this blog?
+## What is your purpose for create the blog?
 
 I think just record something about such as life, coding and what my interested in...
 
