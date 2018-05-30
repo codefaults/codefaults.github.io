@@ -1,5 +1,7 @@
 # CODEFAULTS.GITHUB.IO - A magical blog
 
+![Click me to visit blog](http://codefaults.com)
+
 Just a blog hosted by git-page service.
 
 **You may have some doubts, see below.**
