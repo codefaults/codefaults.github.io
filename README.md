@@ -2,7 +2,7 @@
 
 Just a blog hosted by git-page service.
 
-**You may had some doubts, see below.**
+**You may have some doubts, see below.**
 
 ## What here I can found?
 
@@ -20,8 +20,8 @@ Not only that, I think writing with git is natural and simple wday.
 
 ## How long will you update your blog?
 
-I am afraid that I can't tell you how long I will update my blog. But once I am free, I am going to update my blog.
+I am afraid that I can't tell you how long I will update my blog. As soon as I have free time, I will update my blog.
 
 ---
 
-If your doubt still could not be solved, I suggest you would be contact with me.
+If your doubts still could not be solved, you can contact me at any time. I will responded to you when I see.
