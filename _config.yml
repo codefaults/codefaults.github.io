@@ -24,7 +24,7 @@ github_username:  codefaults
 
 # Build settings
 
-theme: jekyll-theme-cayman
+theme: jekyll-theme-hacker
 plugins:
   - jekyll-feed
 
