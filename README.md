@@ -1,6 +1,6 @@
 # CODEFAULTS.GITHUB.IO - A magical blog
 
-![Click me to visit blog](http://codefaults.com)
+<a href="http://codefaults.com">Click me to visit blog</a>
 
 Just a blog hosted by git-page service.
 
