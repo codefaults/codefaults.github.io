@@ -1,0 +1,23 @@
+<div class="g-load-wrapper">
+    <div class="g-load">
+        <div class="g-preload g-preload-percentage bar"></div>
+        <div class="g-loaded g-loaded-percentage bar"></div>
+    </div>
+</div>
+<script>
+    (function() {
+        var LoadBar = function($el) {
+            var e_load_bar = $el;
+            var e_preload_bar = $el.getElementsByClassName('g-preload-percentage')[0];
+            var e_load_bar = $el.getElementsByClassName('g-loaded-percentage')[0];
+            this.setPreloadPercent = function(percent) {
+                e_preload_bar.style.width = percent + '%';
+            };
+
+            this.setLoadPercent = function(percent) {
+                e_load_bar.style.width = percent + '%';
+            };
+        };
+        window.LoadBar = new LoadBar(document.getElementsByClassName('g-load')[0]);
+    })();
+</script>

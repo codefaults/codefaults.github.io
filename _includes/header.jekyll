@@ -1,0 +1,23 @@
+<div class="g-header-wrapper">
+    <div class="g-header-effect"></div>
+    <header class="g-header header">
+        <div class="g-title">
+            <a class="link" href="{{ site.url }}">{{ site.title }}</a>
+        </div>
+        <div class="g-navigator-wrapper">
+            <nav class="g-navigator">
+                <a class="item" style="margin-right:0" href="/">Index</a>
+                <div style="float:left;overflow:hidden;position:relative;width:25px;height:100%;font-size:0;">
+                    <div style="display:inline-block;position:absolute;top:20%;left:50%;width:2px;height:60%;background-color:#D6D6D6;transform:translate(-50%,0)"></div>
+                </div>
+                <div style="float:left;position:relative;height:100%;font-size:0;margin-right:10px;">
+                    <span style="display:inline-block;position:relative;top:50%;height:14px;line-height:14px;color:#D6D6D6;font-size:1rem;transform:translate(0,-50%)">PAGE</span>
+                </div>
+                {% assign top_pages = site.pages | where: "layout", "page" | slice: 0, 2 %}
+                {% for pg in top_pages %}
+                <a class="item" href="{{ pg.url }}">{{ pg.title }}</a>
+                {% endfor %}
+            </nav>
+        </div>
+    </header>
+</div>

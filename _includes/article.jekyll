@@ -1,0 +1,3 @@
+{% for pg in site.pages %}
+<p>{{ pg }}</p><br><br>
+{% endfor %}

@@ -1,0 +1,324 @@
+---
+---
+
+*
+    padding: 0
+    margin: 0
+
+html
+    font-size: 10px
+    width: 100%
+    height: 100%
+
+body
+    position: relative
+    font-size: 1.4rem
+    width: 100%
+    min-height: 100%
+    background-color: #F0F0F0
+
+$home_main_width: 70%
+$home_main_min_width: 720px
+$home_remain_left: 25%
+$home_remain_right: 25%
+
+$home_loadbar_enabled: true
+$home_loadbar_height: 3px
+$home_loadbar_color: #4C4C4C
+$home_preloadbar_color: #CCB083
+$home_loadedbar_color: #54B273
+
+$home_header_height: 60px
+$home_header_navigator_height: 40px
+$home_header_navigator_color_hover: #D6D6D6
+
+.g-load-wrapper
+    position: relative
+    width: 100%
+    height: $home_loadbar_height
+
+.g-load
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: $home_loadbar_height
+    background-color: $home_loadbar_color
+    .bar
+        position: absolute
+        top: 0
+        left: 0
+        height: $home_loadbar_height
+        transition: width .2s
+    .g-preload
+        width: 66%
+        background-color: $home_preloadbar_color
+    .g-loaded
+        width: 33%
+        background-color: $home_loadedbar_color
+
+.g-content
+    width: $home_main_width
+    min-width: $home_main_min_width
+    height: 100%
+    margin: 0 auto
+
+.g-header-wrapper
+    width: 100%
+    min-width: $home_main_min_width
+    margin: 0 0 10px 0
+
+.g-header-effect
+    position: absolute
+    left: 0
+    width: 100%
+    height: $home_header_height
+    background-color: #FFF
+    border-bottom: 4px #D0D0D0 solid
+
+.g-header
+    position: relative
+    width: $home_main_width
+    min-width: $home_main_min_width
+    height: $home_header_height
+    margin: 0 auto
+    font-size: 0
+    > *
+        font-size: 1.4rem
+    .g-title
+        $height: 50px
+        display: inline-block
+        position: relative
+        top: ($home_header_height - $height) / 2
+        height: $height
+        line-height: $height
+        .link
+            display: inline-block
+            width: 100%
+            height: 100%
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+            font-size: 2.6rem
+            color: #555
+            font-weight: lighter
+            text-decoration: none
+            transition: text-shadow .2s ease-in-out
+            &:hover
+                text-shadow: 0 0 15px #666
+
+.g-navigator-wrapper
+    display: inline-block
+    position: absolute
+    top: ($home_header_height - $home_header_navigator_height) / 2
+    right: 20px
+    height: $home_header_navigator_height
+
+.g-navigator
+    display: inline-block
+    overflow: auto
+    height: 100%
+    font-size: 0
+    zoom: 1
+    .item
+        float: left
+        position: relative
+        height: $home_header_navigator_height
+        padding: 0 15px
+        font-size: 1.4rem
+        line-height: $home_header_navigator_height
+        margin-right: 10px
+        color: inherit
+        text-decoration: none
+        &:last-child
+            margin-right: 0
+            border-right: none
+        &:before, &:after
+            display: block
+            position: absolute
+            top: 0
+            width: 0
+            height: 100%
+            background-color: rgba($home_header_navigator_color_hover, 0.35)
+            content: ""
+            transform: translate3d(0,0,0)
+            transition: width .2s ease-in-out
+        &:hover:before, &:hover:after
+            width: 50%
+        &:before
+            right: 50%
+        &:after
+            left: 50%
+
+.g-posts
+    margin-top: 20px
+    > .title
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+        font-size: 3.6rem
+        font-weight: lighter
+        > span
+            display: inline-block
+    .post-wrapper
+        padding: 25px
+        &:last-child
+            margin: 0
+    .post
+        padding: 15px
+        background-color: #FCFCFC
+        box-shadow: 5px 5px 15px #999
+        .title
+            display: inline-block
+            font-size: 2.4rem
+            margin: 0 0 5px 0
+            padding: 0 0 10px 0
+            border-bottom: 2px #A0A0A0 solid
+            color: #333
+        .date
+            display: inline-block
+            font-size: 1.2rem
+        .preview
+            margin: 10px 0
+            font-size: 1.4rem
+            color: #555
+            &.empty
+                color: #AAA
+        .option
+            overflow: auto
+            margin-top: 10px
+            zoom: 1
+            .left
+                float: left
+            .right
+                float: right
+            .state-group
+                font-size: 0
+            .state
+                display: inline-block
+                font-size: 1.4rem
+                margin-right: 15px
+                .lable
+                    margin-right: 5px
+                    font-weight: bold
+            .state:last-child
+                margin-right: 0
+            .read
+                display: inline-block
+                padding: 5px 10px
+                color: #4C4C4C
+                text-decoration: none
+                border: 2px #7C7C7C solid
+                transition: color .3s, border-color .3s
+                &:hover
+                    color: #1C3245
+                    border-color: #4C6275
+                
+
+
+
+.g-footer-wrapper
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    margin: 20px 0 0 0
+
+
+.g-footer-effect
+    z-index: -1
+    position: absolute
+    top: -4px
+    bottom: 0
+    width: 100%
+    background-color: #FFF
+    border-top: 4px #CCC solid
+
+.g-footer
+    width: $home_main_width
+    min-width: $home_main_min_width
+    padding: 10px 0
+    margin: 0 auto
+    color: #333
+
+    > .col
+        padding: 10px 0
+        > .title
+            margin-bottom: 10px
+            .text
+                font: normal normal lighter 2.4rem/normal -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+                color: #A0A0A0
+
+.g-friends
+    .list
+        display: flex
+        flex-wrap: wrap
+    .link
+        color: #333
+        margin: 10px 15px
+        padding: 0 0 5px 0
+        font-size: 1.8rem
+        text-decoration: none
+        border-bottom: 2px #888 solid
+        transition: color .3s ease-in-out, border-bottom-color .3s
+        &:hover
+            color: #CF785C
+            border-bottom-color: #FF9471
+
+.g-social
+    .box
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+    .card
+        text-align: center
+        margin-right: 20px
+        user-select: none
+        .account
+            user-select: all
+            -moz-user-select: all
+            -ms-user-select: all
+            -webkit-user-select: all
+        .qr
+            width: 150px
+            height: 150px
+            margin: 0 auto
+            border: 1px black solid
+            img
+                display: block
+                width: 150px
+                height: 150px
+
+.g-social .bonus
+    position: relative
+    height: 24px
+    width: 100%
+    padding: 3px 0
+    .scene-1
+        position: relative    
+        height: 24px
+        width: 70px
+        margin: 0 auto
+        span
+            display: inline-block
+            width: 24px
+            line-height: 24px
+            font-weight: lighter
+            font-size: 1.6rem            
+            &:before, &:after
+                display: inline-block
+                position: absolute
+                top: 10px
+                width: 10px
+                height: 2px
+                background-color: #555
+                content: ""
+            &:before
+                left: 0
+            &:after
+                right: 0
+    .scene-2
+        display: none
+        height: 24px
+        width: 100%
+        padding: 3px 5px
+        line-height: 14px
+        font-size: 1.2rem
+        border: 2px #4C5375 solid
+        box-sizing: border-box

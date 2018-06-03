@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,ie=edge">
+    <title>{{ site.title }}</title>
+    <link rel="stylesheet" href="assets/style/default/home.css">
+    <script src="assets/script/unsupport.js"></script>
+</head>
+
+<body>
+    <div class="g-load-wrapper">
+        <div class="g-load">
+            <div class="g-preload g-preload-percentage bar"></div>
+            <div class="g-loaded g-loaded-percentage bar"></div>
+        </div>
+    </div>
+    <script>
+        (function() {
+            var LoadBar = function($el) {
+                var e_load_bar = $el;
+                var e_preload_bar = $el.getElementsByClassName('g-preload-percentage')[0];
+                var e_load_bar = $el.getElementsByClassName('g-loaded-percentage')[0];
+                this.setPreloadPercent = function(percent) {
+                    e_preload_bar.style.width = percent + '%';
+                };
+
+                this.setLoadPercent = function(percent) {
+                    e_load_bar.style.width = percent + '%';
+                };
+            };
+            window.LoadBar = new LoadBar(document.getElementsByClassName('g-load')[0]);
+        })();
+    </script>
+
+    <div class="g-header-wrapper">
+        <div class="g-header-effect"></div>
+        <header class="g-header header">
+            <div class="g-title">
+                <a class="link" href="{{ site.url }}">{{ site.title }}</a>
+            </div>
+            <div class="g-navigator-wrapper">
+                <nav class="g-navigator">
+                    <a class="item" style="margin-right:0" href="/">Index</a>
+                    <div style="float:left;overflow:hidden;position:relative;width:25px;height:100%;font-size:0;">
+                        <div style="display:inline-block;position:absolute;top:20%;left:50%;width:2px;height:60%;background-color:#D6D6D6;transform:translate(-50%,0)"></div>
+                    </div>
+                    <div style="float:left;position:relative;height:100%;font-size:0;margin-right:10px;">
+                        <span style="display:inline-block;position:relative;top:50%;height:14px;line-height:14px;color:#D6D6D6;font-size:1rem;transform:translate(0,-50%)">PAGE</span>
+                    </div>
+                    {% assign top_pages = site.pages | where: "layout", "page" | slice: 0, 2 %}
+                    {% for pg in top_pages %}
+                    <a class="item" href="{{ pg.url }}">{{ pg.title }}</a>
+                    {% endfor %}
+                </nav>
+            </div>
+        </header>
+    </div>
+
+    <div class="g-content">
+        
+        <article class="g-posts">
+            <header class="title">
+                <span>Posts</span>
+            </header>
+            {% assign posts = site.posts | where: "layout","post" %}
+            {% for post in posts %}
+            <section class="post-wrapper">
+                <article class="post">
+                    <header class="meta">
+                        <span class="title">{{ post.title }}</span>
+                    </header>
+                    {% assign _ = post.content | url_encode | downcase %}
+                    {% if '%0a' == _ %}
+                    <section class="preview empty">No contents here.</section>
+                    {% else %}
+                    {% assign _ = post.content | strip_html | truncatewords: 75 %}
+                    <section class="preview">{{ _ }}</section>
+                    {% endif %}
+                    <section class="option">
+                        <div class="left">
+                            <div class="state-group">
+                                <div class="read-state state"><span class="lable">Reads</span><span class="value">100</span></div>
+                                <div class="like-state state"><span class="lable">Likes</span><span class="value">100</span></div>
+                                <div class="comment-state state"><span class="lable">Comments</span><span class="value">100</span></div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <span class="date" style="margin-right:10px">Repoted in {{ site.time | date_to_rfc822 }}</span>
+                            <a class="read" href="{{ post.url }}">View All</a>
+                        </div>
+                    </section>
+                </article>
+            </section>
+            {% endfor %}
+        </article>
+
+        <article class="g-drafts">
+        </article>
+        
+    </div>
+
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=280 height=52 src="//music.163.com/outchain/player?type=2&id=30089063&auto=0&height=32"></iframe>
+    
+
+    <div class="g-footer-wrapper">
+        <div class="g-footer-effect"></div>
+        <footer class="g-footer">
+            <div class="g-friends col">
+                <div class="title">
+                    <span class="text">Friend Links</span>
+                </div>
+                <div class="list">
+                    {% assign friends = site.data.friends %}
+                    {% if friends %}
+                    {% for _ in friends %}
+                    <a class="link" href="{{ _.url }}">{{ _.name }}</a>
+                    {% endfor %}
+                    {% else %}
+                    <div>This noob have not friends yet.</div>
+                    {% endif %}
+                </div>
+            </div>
+            <script>
+                (function() {
+                    function showScene(card, id) {
+                        var bonus = card.getElementsByClassName('bonus')[0];
+                        var scenes = [null, bonus.getElementsByClassName('scene-1')[0], bonus.getElementsByClassName('scene-2')[0]];
+                        for(var i = 1; i < scenes.length; i++) {
+                            scenes[i].style.display = 'none';
+                        }
+                        scenes[id].style.display = 'inline-block';
+                    }
+
+                    function onAccountClick(el) {
+                        var card = document.getElementById(el.getAttribute('data-bind'));
+                        showScene(card, 2);
+                        setTimeout(function() {
+                            if(!card.querySelector('.scene-2').hasAttribute('show')) {
+                                showScene(card, 1);
+                            }
+                        },1000);
+                    }
+
+                    function onAccountCopy(el) {
+                        sender = el;
+                        el = document.getElementById(el.getAttribute('data-bind')).querySelector('.account');
+                        var select = window.getSelection();
+                        var range = document.createRange();
+                        range.selectNodeContents(el);
+                        select.removeAllRanges();
+                        select.addRange(range);
+                        document.execCommand('copy');
+                        sender.innerHTML = 'Copied!'
+                        sender.parentElement.setAttribute('show', '');
+                        sender.parentElement.setAttribute('ignore-mouseout', '');
+                        setTimeout(function() {
+                            sender.parentElement.removeAttribute('show');
+                            sender.parentElement.removeAttribute('ignore-mouseout');
+                            sender.parentElement.style.display = 'none';
+                            var n = sender.parentElement.parentElement;
+                            n.querySelector('.scene-1').style.display = 'inline-block';
+                            sender.innerHTML='Click me!';
+                            select.removeAllRanges();
+                        }, 1000);
+                    }
+
+                    window.onAccountClick = onAccountClick;
+                    window.onAccountCopy = onAccountCopy;
+                    window.changeBonus = showScene;
+                })()
+            </script>
+            <div class="g-social col">
+                <div class="title">
+                    <span class="text">Social Media</span>
+                    <span style="font-size:1.2rem;margin-left:10px">Try click to somethings</span>
+                </div>
+                <div class="box">
+                    <div id="g-we" class="g-we card">
+                        <div style="margin-bottom:5px;">WeChat: <span class="account" data-bind="g-we">CodeFaults</span></div>
+                        <div class="bonus">
+                            <div class="scene-1">
+                                <span>OR</span>
+                            </div>
+                            <div class="scene-2">
+                                <div class="clickme" data-bind="g-we">Click ME!</div>
+                            </div>
+                        </div>
+                        <div style="margin-bottom:5px;">Scan below</div>
+                        <div class="qr">
+                            <img src="assets/image/qr-we.png" />
+                        </div>
+                    </div>
+
+                    <div id="g-qq" class="g-qq card">
+                        <div style="margin-bottom:5px;">QQ: <span class="account" data-bind="g-qq">405635135</span></div>
+                        <div class="bonus">
+                            <div class="scene-1">
+                                <span>OR</span>
+                            </div>
+                            <div class="scene-2">
+                                <div class="clickme" data-bind="g-qq">Click ME!</div>
+                            </div>
+                        </div>
+                        <div style="margin-bottom:5px;">Scan below</div>
+                        <div class="qr">
+                            <img src="assets/image/qr-qq.png" />    
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    (function() {
+                        var selectors = null;
+                        selectors = document.querySelectorAll('.card .account');
+                        for(var i = 0; i < selectors.length; i++) {
+                            selectors[i].addEventListener('click', function(e) {
+                                onAccountClick(e.target);
+                            });
+                        }
+                        
+                        selectors = document.querySelectorAll('.card .bonus .clickme');
+                        for(var i = 0; i < selectors.length; i++) {
+                            selectors[i].addEventListener('click', function(e) {
+                                onAccountCopy(e.target);
+                            });
+                            selectors[i].addEventListener('mouseover', function(e) {
+                                this.parentElement.setAttribute('show','');
+                            });
+                            selectors[i].addEventListener('mouseout', function(e) {
+                                if(!this.parentElement.hasAttribute('ignore-mouseout')) {
+                                    this.parentElement.removeAttribute('show');
+                                }
+                                var el = this;
+                                setTimeout(function(){
+                                    if(!el.parentElement.hasAttribute('show')) {
+                                        changeBonus(document.getElementById(el.getAttribute('data-bind')), 1);
+                                    }
+                                },1000);
+                            });
+                        }
+                    })()
+                </script>
+            </div>
+
+            <div class="public">
+    
+            </div>
+            
+        </footer>
+    </div>
+    <script>
+        (function() {
+            function getElementBoxHeight(el) {
+                var a,b,c,d,e,f,s;
+                s = el.currentStyle || window.getComputedStyle(el);
+                a = parseInt(s.marginTop) || 0;
+                b = parseInt(s.marginBottom) || 0;
+                c = parseInt(s.paddingTop) || 0;
+                d = parseInt(s.paddingBottom) || 0;
+                e = parseInt(s.borderTopWidth) || 0;
+                f = parseInt(s.marginBottomWidth) || 0;
+                console.log(a);
+                return a + b + c + d + e + f + el.offsetHeight;
+            }
+            var el = document.getElementsByClassName('g-footer-wrapper')[0];
+            var h = getElementBoxHeight(el);
+            
+            console.log(h);
+            var node = document.createElement('div');
+            node.style = "display:block;height:" + h + "px;width:100%;"
+            node.className = 'g-footer-placeholder';
+            el.parentElement.insertBefore(node, el);
+        })()
+    </script>
+    
+</body>
+
+</html>

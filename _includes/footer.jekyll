@@ -1,0 +1,49 @@
+<div class="g-footer-wrapper">
+    <div class="g-footer-effect"></div>
+    <footer class="g-footer">
+        <div class="public">
+
+        </div>
+        <div class="g-friends">
+            <div class="title">
+                <span class="text">Friend Links</span>
+            </div>
+        </div>
+        <div class="g-contact">
+            <div class="g-wechat box">
+                <div class="qr">
+
+                </div>
+            </div>
+            <div class="g-qq box">
+                <div class="qr">
+
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<script>
+    (function() {
+        function getElementBoxHeight(el) {
+            var a,b,c,d,e,f,s;
+            s = el.currentStyle || window.getComputedStyle(el);
+            a = parseInt(s.marginTop) || 0;
+            b = parseInt(s.marginBottom) || 0;
+            c = parseInt(s.paddingTop) || 0;
+            d = parseInt(s.paddingBottom) || 0;
+            e = parseInt(s.borderTopWidth) || 0;
+            f = parseInt(s.marginBottomWidth) || 0;
+            console.log(a);
+            return a + b + c + d + e + f + el.offsetHeight;
+        }
+        var el = document.getElementsByClassName('g-footer-wrapper')[0];
+        var h = getElementBoxHeight(el);
+        
+        console.log(h);
+        var node = document.createElement('div');
+        node.style = "display:block;height:" + h + "px;width:100%;"
+        node.className = 'g-footer-placeholder';
+        el.parentElement.insertBefore(node, el);
+    })()
+</script>
