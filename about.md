@@ -7,19 +7,19 @@ permalink: /about/
 
 ## Who am I
 
-I am a collapsed high school student.
+I am a high school student who had fallen apart.
 
-If you want to know my real-name. emmmm... Actually, I would not to share my real-name in this public space. If you have a few of interesting at me, you can find me at social software!~ (Chatting only. for play plane, please get the hell out of here!! I am straight!!!)
+Real-name? emmmm&hellip;, actually, I'm not sharing my real-name publicly. If you want to learn more about me, find me on social media!~ (We can chat, but don't be expecting a gay partner! I am straight!!!)
 
-## Where are I from
+## Where am I from?
 
 China.
 
-## Where are I living on
+## Where do I live?
 
-A small-sized city in China and it is poor and backward, but here is really safety.
+A small city in China, it is poor and undeveloped, but really safe.
 
-Because here is Xin Jiang!
+Because it is XinJiang!
 
 ## Why is My English so bad
 
@@ -27,14 +27,14 @@ Because I never be learn English before half year.
 
 Exercise my English writing ability is also one of this blog's significance.
 
-## What social software do I play
+## What social media am I on?
 
-| Platform | Account ID |
+| Social media | Account |
 |:---:|:---:|
-| QQ |405635135 |
+| QQ | 405635135 |
 | Telegram | codefaults |
 | WeChat | codefaults |
 
 ## More questions
 
-I suggest you add my social software account and talking with me, cheerfully and humorously.
+You can find me on social media and talk with me, with joy and humor.
