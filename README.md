@@ -1,29 +1,30 @@
 # CODEFAULTS.GITHUB.IO - A magical blog
 
-<a href="http://codefaults.com">Click me to visit blog</a>
+<a href="http://codefaults.com">Click me to visit the blog</a>
 
-Just a blog hosted on git-page service.
+Just a blog hosted on github.io.
 
-**You may have some doubts, see below.**
+**You may have some questions:**
 
-## What here I can found?
+## What can I find here?
 
-Okay, Your this question is very good, but I want tell you **nothing at here**.
+Okay, this is a very good question, but the answer is **nothing**.
 
-## What is your purpose for create the blog?
+## What is your purpose for creating this blog?
 
-I think just record something about such as life, coding and what my interested in...
+For journaling things in life, writing things about coding and my interests&hellip;
 
-## Why do you made the choice that hosted on git page?
+## Why do you choose to host this blog on github.io?
 
-WWWWhat??? Are you a idiot??? **It is sure of the cheap way!!!** For me, that a poor high-school student, I think a hosting is expensive, although its cost is just 30RMB per month. Moreover, I can't save my money at all.
+WWWWhat??? Isn't it so obvious??? **It is sure the cheapest way!!!** For me, a poor high-school student, getting a server is expensive, even if it is just 30RMB per month.
+Moreover, I don't save any money at all.
 
-Not only that, I think writing with git is natural and simple way.
+Not only that, but also I think writing with git is natural and simple.
 
-## How long will you update your blog?
+## How often will you update your blog?
 
-I am afraid that I can't tell you how long I will update my blog. As soon as I have free time, I will update my blog.
+I am afraid that I can't tell you how often. As soon as I have free time, I will update my blog.
 
 ---
 
-If your doubts still could not be solved, you can contact me at any time. I will responded to you when I see.
+If your still have questions, you can contact me at any time. I will responded to you after I see your message.

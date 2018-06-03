@@ -7,15 +7,14 @@ categories: essay jekyll
 
 ## The palest ink is better than the best memory.
 
-I always like to research something that I interested in, but it would not be long before I forgot. So I decide to openned up this blog to record my life and my research.
+I always like to research something that I interested in, but it would not be long before I forgot. So I decided to open up this blog to record my life and my research.
 
-## Leave something of my past.
+## Leave something from the past.
 
-Time's past as stream. I can not touch it, and also I can not sight it. But I can make something leave in, such as these article, these codes...
+Time passes like stream. I can not touch it, and I can not see it. But I can make something remain, such as these article, these codes...
 
-Maybe after a decade, when I sight these, I think I can remember things at that time.
+I think maybe after a decade when I saw these, I can remember something.
 
-## Exercise my writing
+## Practice my writing
 
-I have not do my homework for almost 3 years. If I still on this way, I am afraid I would be a wreck. So I want to make up for something. :)
-
+I have not been doing my homework for almost 3 years. If I still be like this, I am afraid I would become a wreck. So I want to make up for something. :)
